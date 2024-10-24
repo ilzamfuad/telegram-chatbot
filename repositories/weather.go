@@ -65,8 +65,7 @@ func GetWeather(update tgbotapi.Update) (string, error) {
 			hour.ChanceOfRain,
 			hour.Condition.Text,
 		)
-
-		infoPlace = fmt.Sprintf("%s\n%s", infoPlace, message)
+		infoPlace = infoPlace + message
 	}
 	return infoPlace, nil
 }

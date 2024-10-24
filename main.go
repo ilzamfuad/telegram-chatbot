@@ -18,5 +18,6 @@ func main() {
 	}))
 	bot := clients.Init()
 	handlers.Init(bot)
+	log.Println("Server starting on port:", config.Config("PORT"))
 	log.Fatal(app.Listen(":" + config.Config("PORT")))
 }
